@@ -22,7 +22,7 @@ function WatchPage() {
     <div className="flex flex-col">
       <div className="flex flex-col justify-center items-center xl:items-start xl:justify-start  xl:flex xl:flex-row ">
         <iframe
-          className=" w-50m-2 rounded-md xl:w-[1200px] xl:h-[500px] xl:m-8"
+          className=" w-50 m-2 rounded-md xl:w-[1000px] xl:h-[500px] xl:m-8"
           src={"https://www.youtube.com/embed/" + searchParams.get("v")}
           title="YouTube video player"
           frameBorder="0"

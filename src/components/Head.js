@@ -32,6 +32,7 @@ function Head() {
     let data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     let json = await data.json();
     setSearchSuggestion(json[1]);
+    console.log(json);
 
     // update
     dispatch(cacheResult({
@@ -67,7 +68,7 @@ function Head() {
         <div className=" flex justify-center align-middle xl:col-span-10">
           <input
             type="text"
-            className="w-30 h-8 mt-4 px-4 text-sm outline-none xl:w-2/3   bg-slate-900 rounded-l-full xl:h-16  xl:text-2xl"
+            className="w-28 h-8 mt-4 px-4 text-sm outline-none xl:w-2/3   bg-slate-900 rounded-l-full xl:h-14  xl:text-xl"
             placeholder="search"
             value={searchQuery}
             onChange={(e) => {
@@ -82,13 +83,13 @@ function Head() {
               setHideSuggestionBox(false);
             }}
           />
-          <button className="h-8  mt-4 p-1 rounded-r-full bg-slate-900 xl:h-16 xl:p-4">
+          <button className="h-8  mt-4 p-1 rounded-r-full bg-slate-900 xl:h-14 xl:p-4">
             🔍
           </button>
         </div>
         <div className="xl:col-span-1">
           <img
-            className=" w-15 h-5 bg-white rounded-full mt-5 xl:h-12 "
+            className=" w-15 h-5 bg-white rounded-full mt-6  xl:h-12 "
             src={User}
             alt="user"
           />
